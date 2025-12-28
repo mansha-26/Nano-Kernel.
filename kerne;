@@ -1,0 +1,12 @@
+#ifndef KERNEL_H
+#define KERNEL_H
+
+#include <stdint.h>
+
+#define KERNEL_VERSION "1.0"
+
+// Function declarations
+void kernel_main(void);
+void show_system_status(void);
+
+#endif
