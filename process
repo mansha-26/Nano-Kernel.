@@ -1,0 +1,31 @@
+#ifndef PROCESS_H
+#define PROCESS_H
+
+#include <stdint.h>
+
+#define MAX_PROCESSES 64
+#define PROCESS_NAME_LEN 32
+
+typedef enum {
+    PROCESS_NEW,
+    PROCESS_READY,
+    PROCESS_RUNNING,
+    PROCESS_WAITING,
+    PROCESS_TERMINATED
+} process_state_t;
+
+typedef struct {
+    int pid;
+    char name[PROCESS_NAME_LEN];
+    process_state_t state;
+    int priority;
+    uint32_t *page_directory;  // For future memory management
+} process_t;
+
+// Process management functions
+void process_init(void);
+int create_process(const char *name, int priority);
+void kill_process(int pid);
+void show_processes(void);
+
+#endif
