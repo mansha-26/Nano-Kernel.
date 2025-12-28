@@ -1,0 +1,53 @@
+
+Hello World! Mini-OS Booted Successfully!
+Type 'help' for available commands
+
+ mini-os>  echo  hello help ps mem devices ipc files schedule clear Hello World! Welcome to Mini-OS!
+This is a minimal operating system kernel
+demonstrating process management, memory,
+devices, IPC, files, and scheduling!
+ Available commands:
+  echo <text>   - Display text
+  hello         - Show Hello World message
+  help          - Show this help
+  ps            - Show processes
+  mem           - Show memory info
+  devices       - List devices
+  ipc           - Show IPC status
+  files         - List files
+  schedule      - Show scheduler info
+  clear         - Clear screen
+ Running processes:
+  PID 1: init         [RUNNING]
+  PID 2: shell        [READY]
+  PID 3: logger       [WAITING]
+  PID 4: device_mgr   [READY]
+ Memory usage:
+  Total:    1024 MB
+  Used:     128 MB
+  Free:     896 MB
+  Kernel:   64 MB
+  Processes: 64 MB
+ Connected devices:
+  Console (tty0)     [READY]
+  System Timer       [READY]
+  Keyboard           [READY]
+  Virtual Disk       [READY]
+ IPC channels:
+  shm_console    - 2 processes
+  msg_system     - 4 messages queued
+  pipe_log       - 8 messages queued
+ File system:
+  kernel.bin    102400  BINARY
+  config.txt      512  TEXT
+  log.txt        2048  TEXT
+  init           8192  EXECUTABLE
+ Scheduler information:
+  Algorithm:      Round Robin
+  Time Slice:     10 ms
+  Scheduler Ticks: 1542
+  Context Switches: 128
+  Ready Queue:     3 processes
+  Running:         init (PID 1)
+ Unknown command. Type 'help' for options.
+                                                                 
