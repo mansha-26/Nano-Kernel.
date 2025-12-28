@@ -1,0 +1,16 @@
+#ifndef IPC_H
+#define IPC_H
+
+#define MAX_IPC_CHANNELS 16
+#define MAX_MESSAGES 32
+
+typedef struct {
+    char name[32];
+    int message_count;
+    int process_count;
+} ipc_channel_t;
+
+void ipc_init(void);
+void show_ipc_status(void);
+
+#endif
