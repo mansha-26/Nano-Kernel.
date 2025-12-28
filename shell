@@ -1,0 +1,12 @@
+#ifndef SHELL_H
+#define SHELL_H
+
+#define MAX_CMD_LEN 128
+#define MAX_ARGS 8
+
+void shell_start(void);
+void shell_readline(char *buffer, int max_len);
+void shell_execute(const char *cmd);
+void show_help(void);
+
+#endif
