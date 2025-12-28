@@ -1,0 +1,24 @@
+#ifndef DEVICE_H
+#define DEVICE_H
+
+#define MAX_DEVICES 16
+
+#define DEVICE_CONSOLE 0
+#define DEVICE_TIMER 1
+#define DEVICE_KEYBOARD 2
+#define DEVICE_DISK 3
+
+#define DEVICE_READY 0
+#define DEVICE_NOT_READY 1
+
+typedef struct {
+    char name[32];
+    int type;
+    int status;
+} device_t;
+
+void device_init(void);
+void register_device(const char *name, int type, int status);
+void show_devices(void);
+
+#endif
